@@ -1,25 +1,20 @@
-package condicionaisLista1;
+package condicionaisLista2;
 import java.util.Scanner;
 
 public class Questao4Condicionais1 {
 
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
-		System.out.println("Informe sua idade: ");
-		int idade = s.nextInt();
+		System.out.println("Insira sua idade em dias totais: ");
+		int diasT = s.nextInt();
 		
-		if(idade == 16 || idade == 17 || idade > 65) {
-			System.out.println("Eleitor facultativo. ");
-		}
+		int anos = diasT / 365;
+		int restoA = diasT % 365;
 		
-		if(idade > 17 && idade < 65) {
-			System.out.println("Eleitor obrigatório. ");
-		}
+		int meses = restoA / 30;
+		int restoM = restoA % 30;
 		
-		if(idade < 16) {
-			System.out.println("Não eleitor");
-		}
-
+		int dias = restoM;
+		System.out.println(anos + " " + meses + " " + dias);
 	}
-
 }
